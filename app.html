@@ -11,9 +11,24 @@
 
 </head>
 <body onresize="ajustaTamanhoAtual()">
+
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="./src/imagens/coracao_cheio.png" alt="">
+            <img id="v2" src="./src/imagens/coracao_cheio.png" alt="">
+            <img id="v3" src="./src/imagens/coracao_cheio.png" alt="">
+        </div>
+        <div class="cronometro">
+            Tempo restante: <span id="cronometro"></span>
+        </div>
+    </div>
     
 <script>
-    posicaoRandomica()
+    document.getElementById('cronometro').innerHTML = tempo
+
+  var criaMosca = setInterval(function(){
+        posicaoRandomica()
+    }, criaMosquitoTempo )
 </script>
 </body>
 </html>
